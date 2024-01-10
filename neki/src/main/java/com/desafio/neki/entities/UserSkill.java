@@ -15,8 +15,8 @@ public class UserSkill {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", insertable = false, updatable = false)
-	private Integer id;
+	@Column(name = "id_user_skill", insertable = false, updatable = false)
+	private Integer idUserSkill;
 
 	@ManyToOne
 	@JoinColumn(name = "id", referencedColumnName = "id")
@@ -27,11 +27,11 @@ public class UserSkill {
 	private Skill skill;
 
 	public Integer getId() {
-		return id;
+		return idUserSkill;
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
+		this.idUserSkill = id;
 	}
 
 	public User getUser() {
@@ -56,7 +56,7 @@ public class UserSkill {
 
 	public UserSkill(Integer id, User user, Skill skill) {
 		super();
-		this.id = id;
+		this.idUserSkill = id;
 		this.user = user;
 		this.skill = skill;
 	}

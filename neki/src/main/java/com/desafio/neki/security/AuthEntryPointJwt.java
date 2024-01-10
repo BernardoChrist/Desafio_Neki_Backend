@@ -20,6 +20,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Component
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
+	//classe responsável por lidar com exceções de autenticação, 
+	//registrando informações relevantes no log e retornando uma 
+	//resposta JSON indicando que a requisição não está autorizada (HTTP 401 Unauthorized).
+	
 	private static final Logger logger = LoggerFactory.getLogger(AuthEntryPointJwt.class);
 
 	@Override

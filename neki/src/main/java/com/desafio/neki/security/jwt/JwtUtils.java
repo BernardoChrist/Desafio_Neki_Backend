@@ -17,6 +17,9 @@ import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
+//classe onde é gerada o Token com base no nome do usuario e sKey, depois fazendo
+// a validação do Token.
+
 @Component
 public class JwtUtils {
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);

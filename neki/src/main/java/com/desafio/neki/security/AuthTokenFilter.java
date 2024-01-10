@@ -20,6 +20,10 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/*classe atua como um filtro que verifica a presença de um token JWT 
+nas requisições, valida o token, e, se válido, autentica o usuário no contexto 
+de segurança do Spring.*/
+
 public class AuthTokenFilter extends OncePerRequestFilter {
 	@Autowired
 	private JwtUtils jwtUtils;
